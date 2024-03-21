@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: seashell;
+}
+
+
+#cardsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    overflow: hidden;
+    width: 180px;
+    height: 200px;
+    border: 4px solid rgb(71, 56, 56);
+    border-radius: 20px;
+    background: url(https://i0.wp.com/creativenerds.co.uk/wp-content/uploads/2016/06/wild-animal-pattern.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 5px rgb(71, 56, 56);
+}
+
+.card img {
+    width: 100%;
+    margin-top: -20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.found {
+    opacity: 0.8;
+}
+
+#buttonsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+}
+
+button {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: saddlebrown;
+    color: mistyrose;
+    z-index: 3;
+}
+
+.card, button {
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover, button:hover {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+.card:has(.found) {
+    transform: none;
+}
+
+#win {
+    width: 100vw;
+    z-index: 2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: auto;
+    right: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    margin-top: -120px;
+    padding-top: 120px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px black;
+    margin: auto;
+    position: absolute;
+    top: 65%;
+}
+
+#win img {
+    margin: 20px;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px white;
+}
